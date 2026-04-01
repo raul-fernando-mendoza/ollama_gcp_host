@@ -55,7 +55,9 @@ response.raise_for_status()
 data = json.loads(response.text)
 #print(json.dumps(data, indent=2))
 
-content = data.response
+content = data["response"]
+print(content)
+print("RESPOSE\n:")
 start = content.find("```sql\n")
 if start != -1:
     start += len("```sql\n")

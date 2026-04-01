@@ -1,0 +1,54 @@
+curl --request GET \
+--url https://24hf.atlassian.net/oauth/token/accessible-resources \
+--header 'Authorization: Bearer password \
+--header 'Accept: application/json'
+
+curl --request GET \
+--url https://api.atlassian.com/oauth/token/accessible-resources \
+--header 'Authorization: Bearer password \
+--header 'Accept: application/json'
+
+curl -X GET \
+  https://24hf.atlassian.net/wiki/rest/api/space/~620591431fec260068c2e8d6 \
+  -H "Authorization: Bearer password
+
+#with granular.
+curl -X GET \
+  https://mendozra1972.atlassian.net \
+  -H "Authorization: Bearer password
+
+curl --request GET \
+  --url https://api.atlassian.com/oauth/token/accessible-resources \
+  --header 'Authorization: Bearer password \
+  --header 'Accept: application/json'
+
+curl -D- \
+   -X GET \
+   -H "Authorization: Basicpassword \
+   -H "Content-Type: application/json" \
+   "https://mendozra1972.atlassian.net/wiki/rest/api/space"  
+
+#base 64
+echo -n pythonserviceaccount-ny5hyhp2p5@serviceaccount.atlassian.com:$password | base64
+
+#check if the user is valid
+curl -v https://mendozra1972.atlassian.net/wiki/rest/api/space --user pythonserviceaccount-ny5hyhp2p5@serviceaccount.atlassian.com 
+curl -v https://mendozra1972.atlassian.net/wiki/rest/api/space --user pythonserviceaccount-ny5hyhp2p5@serviceaccount.atlassian.com 
+
+
+curl -D- -X GET -u pythonserviceaccount-ny5hyhp2p5@serviceaccount.atlassian.com -H "Content-Type: application/json" https://mendozra1972.atlassian.net/wiki/rest/api/space
+
+curl --header 'Authorization: Bearer password \
+  --url 'https://api.atlassian.com/oauth/token/accessible-resources'
+
+
+
+curl -s GET \
+     -H "Authorization:Basic password \
+      "https://mendozra1972.atlassian.net/wiki/rest/api/space"
+
+#windows
+$headers = @{
+   Authorization = password
+}
+Invoke-RestMethod -Uri "https://24hf.atlassian.net/wiki/rest/api/space/~620591431fec260068c2e8d6" -Headers $headers
